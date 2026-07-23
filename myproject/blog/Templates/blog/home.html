@@ -1,0 +1,7 @@
+
+{% extends 'blog/base.html' %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <h1>Welcome, {{ username|upper }}</h1>
+    <p>This is the home page rendered using a template.</p>
+{% endblock %}

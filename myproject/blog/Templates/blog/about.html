@@ -1,0 +1,23 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>This is the about page.</p>
+</body>
+</html> -->
+
+<!-- Inherit from base.html -->
+ <!-- Extends tag le inherit garxa from base.html -->
+
+
+{% extends 'blog/base.html' %}
+{% block title %} About page {% endblock %}
+{% block content %}
+    <h1>About Us</h1>
+    <p>This is about Page.</p>
+{% endblock %}
