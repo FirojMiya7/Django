@@ -33,3 +33,16 @@ python manage.py startapp blog
 
 {variable} e.g. {name}
 {%tag%} e.g. {%if%}, {%for%}
+
+
+# To create superuser for admin panel to login
+python manage.py createsuperuser
+
+# To install pillow
+python -m pip install pillow
+
+# To make Migrations
+python manage.py makemigrations
+
+# To migrate
+python manage.py migrate
