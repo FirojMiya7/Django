@@ -26,3 +26,10 @@ python manage.py runserver
 python manage.py startapp blog
 
 # ani teslaii setting.py ma gayera installed app ma naya 'blog' add gara.
+
+# MVT (Model View Templates) priciple of django
+
+# Templates: HTML + Django Template language
+
+{variable} e.g. {name}
+{%tag%} e.g. {%if%}, {%for%}

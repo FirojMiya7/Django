@@ -1,4 +1,4 @@
-{% extends "blog/base.html" %}
+{% comment %} {% extends "blog/base.html" %}
 {% block title %}All Posts{% endblock %}
 {% block content %}
     <h1>All Blog Posts ({{ posts|length }})</h1>
@@ -9,4 +9,4 @@
             <li>No posts available.</li>
         {% endfor %}
     </ul>
-{% endblock %}
+{% endblock %} {% endcomment %}
