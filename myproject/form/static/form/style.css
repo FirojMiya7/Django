@@ -1,0 +1,33 @@
+td {
+    padding: 7px;
+    text-align: center;
+    background-color: thistle;
+    font-size: 18px;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(42, 11, 41);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+
+#form_list {
+    list-style-type: none;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.admin{
+    color: rgb(22, 186, 188);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    margin: 50vh 83vw;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
