@@ -1,4 +1,8 @@
 {
     "workbench.browser.enableChatTools": true,
-    "workbench.browser.openLocalhostLinks": false
+    "workbench.browser.openLocalhostLinks": false,
+    "editor.detectLanguage": true,
+    "files.associations": {
+        "*.html": "html"
+    }
 }
