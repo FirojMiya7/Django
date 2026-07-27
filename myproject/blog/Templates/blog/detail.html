@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block title %}Todo Details{% endblock %}
+
+{% block content %}
+
+<h1>Todo Details</h1>
+<p>{{ todo.taskDescription }}</p>
+<p>{{todo.taskName}}</p>
+<p>{{todo.taskType}}</p>
+<p>{{todo.createdAt}}</p>
+<p>{{todo.assignedTo}}</p>
+<p>{{todo.completedAt}}</p>
+<p><img src="{{ todo.image.url }}" alt="Image" width="200"></p>
+
+
+{% endblock %}

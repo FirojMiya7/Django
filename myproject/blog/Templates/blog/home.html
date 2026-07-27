@@ -1,29 +1,30 @@
-<!-- {% comment %} 
 {% extends 'blog/base.html' %}
-{% block title %} Home Page {% endblock %}
+
+{% block title %}Todo Home{% endblock %}
+
 {% block content %}
-    <h1>Welcome, {{ username|upper }}</h1>
-    <p>This is the home page rendered using a template.</p>
-{% endblock %} {% endcomment %} -->
-
-
-{% block title %}
 <h1>Todo Home</h1>
-{% endblock %}
-
-{% block content %}
-<!-- <h1>Welcome, This is home page.</h1> -->
 {% comment %}
 List
 {% endcomment %}
 
 {% for todo in data %}
-<div>
+<!-- <div>
     <p>{{ todo.taskName }}</p>
     <p>{{ todo.taskDescription }}</p>
     <p>{{ todo.taskType }}</p>
     <p>{{ todo.createdAt }}</p>
     <p><img src="{{ todo.image.url }}" alt="Image" width="200"></p>
-</div>
+    <p>Assigned To: {{ todo.assignedTo }}</p>
+    <p>Completed At: {{ todo.completedAt }}</p>
+</div> -->
+<p><img src="{{ todo.image.url }}" alt="Image" width="200"></p>
+    <a href="{% url 'todo_details' todo.id %}">
+        <button>
+        view more...
+    </button>
+    </a>
+
+
 {% endfor %}
 {% endblock %}

@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 # Create your views here.
 
 from django.http import HttpResponse
 
 
+from django.shortcuts import render
 from .models import todo
 
 # def home(request):
@@ -33,3 +34,9 @@ from .models import todo
 def home(request):
     todoData = todo.objects.all()
     return render(request, 'blog/home.html', {'data': todoData})
+
+
+def details(request, id):
+    taskData = get_object_or_404(todo, pk=id)
+    print(taskData.taskDescription)
+    return render(request, 'blog/detail.html', {'todo': taskData})

@@ -13,25 +13,31 @@
     <a href="/admin" class="admin">Admin</a>
     <table border="1">
         <tr>
-            <th id="form_list" colspan="4">Form list</th>
+            <th id="form_list" colspan="7">Form list</th>
         </tr>
         <tr>
+            <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
             <th>Phone Number</th>
+            <th>Date of Birth</th>
+            <th>Address</th>
         </tr>
         {% for student in students %}
         <!-- This line iterates over the 'students' (i.e. Student objects{view ko home(request ma)}) ani each row ma list add garxa -->
         <tr>
+            <td>{{ student.id }}</td>
             <td>{{ student.first_name }}</td>
             <td>{{ student.last_name }}</td>
             <td>{{ student.email }}</td>
-            <td>{{ student.phone_number }}</td>
+            <td>{{ student.phone }}</td>
+            <td>{{ student.dob }}</td>
+            <td>{{ student.address }}</td>
         </tr>
         {% endfor %}
         <tr>
-            <td colspan="4">Total Students: {{ students|length }}</td>
+            <td colspan="7">Total Students: {{ students|length }}</td>
         </tr>
 
     </table>
