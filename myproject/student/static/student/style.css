@@ -1,0 +1,145 @@
+:root {
+            color-scheme: light;
+            --bg: #f5f7fb;
+            --panel: #ffffff;
+            --text: #132238;
+            --muted: #607086;
+            --accent: #1f6feb;
+            --accent-dark: #164ea3;
+            --border: #d7deea;
+            --danger: #c0392b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg, #eef3fb 0%, var(--bg) 100%);
+            color: var(--text);
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 32px auto;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-dark);
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(19, 34, 56, 0.06);
+            padding: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 0;
+            font-size: 0.95rem;
+            cursor: pointer;
+            background: var(--accent);
+            color: white;
+        }
+
+        .studentBtn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 0;
+            font-size: 0.95rem;
+            cursor: pointer;
+            background: thistle;
+            color: black;
+        }
+
+        .studentBtn:hover{
+            background: rgb(136, 79, 136);
+            color:white;
+        }
+
+        .btn:hover {
+            background: var(--accent-dark);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+        }
+
+        .btn-danger:hover {
+            background: #a93226;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        form p {
+            margin: 0 0 16px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font: inherit;
+        }
+
+        .muted {
+            color: var(--muted);
+        }

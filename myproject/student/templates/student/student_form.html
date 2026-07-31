@@ -1,0 +1,17 @@
+{% extends 'student/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>{{ title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="actions">
+            <button type="submit" class="btn">Save Student</button>
+            <a href="{% url 'student:list' %}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
