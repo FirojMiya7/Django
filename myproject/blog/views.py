@@ -31,6 +31,11 @@ from .models import todo
 #     return render(request, 'blog/blog_list.html', context)
 
 
+def mainHome(request):
+    todoData = todo.objects.all()
+    return render(request, 'blog/mainHome.html', {'data': todoData})
+
+
 def home(request):
     todoData = todo.objects.all()
     return render(request, 'blog/home.html', {'data': todoData})

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.delete-card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.warning-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.delete-card h1 {
+  color: #dc2626;
+  margin-bottom: 10px;
+}
+
+.delete-card h2 {
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.warning {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.note {
+  color: #6b7280;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.cancel-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #6b7280;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+@media (max-width: 600px) {
+  .delete-card {
+    padding: 30px 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .delete-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}

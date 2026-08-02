@@ -1,0 +1,122 @@
+{% extends "book/layout.html" %}
+{% load static %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'book/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-shell">
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-badge">Welcome to your library space</div>
+			<h1>Manage books with a clean, calm, and modern experience.</h1>
+			<p>
+				Browse your collection, manage records, and keep everything organized in one simple place.
+				This project keeps the flow simple for learning Django CRUD, authentication, and clean UI structure.
+			</p>
+
+			<div class="hero-actions">
+				<a class="primary" href="{% url 'book' %}">Explore Books</a>
+				<a class="secondary" href="{% url 'login' %}">Login</a>
+				<a class="secondary" href="{% url 'register' %}">Register</a>
+			</div>
+
+			<div class="hero-stats">
+				<div class="stat-pill">
+					<strong>CRUD</strong>
+					<span>Create, read, update, and delete book records</span>
+				</div>
+				<div class="stat-pill">
+					<strong>Auth</strong>
+					<span>Login and register protected access flow</span>
+				</div>
+				<div class="stat-pill">
+					<strong>UI</strong>
+					<span>Responsive cards, navbar, and readable layouts</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<p class="section-label">Project Highlights</p>
+		<h2 class="section-title">Why this Django project feels clean and practical</h2>
+		<p class="section-copy">
+			The goal is not just to show books. It is to demonstrate a small but complete Django app structure with
+			a shared layout, protected pages, reusable templates, and tidy styling for every screen.
+		</p>
+	</section>
+
+	<section class="project-highlights">
+		<div class="project-panel">
+			<div class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none; backdrop-filter: none;">
+				<div class="icon">🧭</div>
+				<h2>Designed for navigation</h2>
+				<p>
+					The same navbar appears across the app, so users can move between home, books, login, and register
+					without getting lost.
+				</p>
+			</div>
+			<div class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none; backdrop-filter: none; margin-top: 18px;">
+				<div class="icon">🔒</div>
+				<h2>Protected book actions</h2>
+				<p>
+					Book pages can stay behind authentication, which makes the project feel more like a real system
+					instead of just a demo.
+				</p>
+			</div>
+		</div>
+
+		<div class="project-list">
+			<div class="project-step">
+				<div class="step-number">1</div>
+				<div>
+					<h3>Open the home page</h3>
+					<p>See the overview, quick links, and what the project can do.</p>
+				</div>
+			</div>
+			<div class="project-step">
+				<div class="step-number">2</div>
+				<div>
+					<h3>Login or register</h3>
+					<p>Use authentication to reach the protected book management screens.</p>
+				</div>
+			</div>
+			<div class="project-step">
+				<div class="step-number">3</div>
+				<div>
+					<h3>Manage books</h3>
+					<p>Add, edit, view, and remove records with a simple workflow.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<article class="feature-card">
+			<div class="icon">📚</div>
+			<h2>Organized Collection</h2>
+			<p>Keep your books in one place with a clear layout and quick access to details.</p>
+		</article>
+
+		<article class="feature-card">
+			<div class="icon">✨</div>
+			<h2>Simple Workflow</h2>
+			<p>Jump between home, book list, login, and register without clutter or confusion.</p>
+		</article>
+
+		<article class="feature-card">
+			<div class="icon">📱</div>
+			<h2>Responsive Design</h2>
+			<p>Looks balanced on mobile, tablet, and desktop with smooth spacing and readable text.</p>
+		</article>
+	</section>
+
+	<section class="home-quote">
+		<strong>Project note:</strong> This app is a good base for adding search, filters, categories, or dashboard cards later.
+	</section>
+</div>
+{% endblock %}

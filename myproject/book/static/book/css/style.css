@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+	--bg: #f4f7fb;
+	--surface: rgba(255, 255, 255, 0.9);
+	--surface-border: rgba(148, 163, 184, 0.18);
+	--text: #0f172a;
+	--muted: #64748b;
+	--primary: #2563eb;
+	--primary-hover: #1d4ed8;
+	--danger: #dc2626;
+	--shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background:
+		radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 30%),
+		radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 24%),
+		var(--bg);
+	color: var(--text);
+	min-height: 100vh;
+}
+
+nav {
+	width: min(400px, calc(100% - 32px));
+	margin: 18px auto 0;
+	padding: 8px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	flex-wrap: wrap;
+	background: var(--surface);
+	border: 1px solid var(--surface-border);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	backdrop-filter: blur(14px);
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+	color: var(--text);
+	text-decoration: none;
+	font-weight: 600;
+	padding: 10px 14px;
+	border-radius: 12px;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+	background: rgba(37, 99, 235, 0.10);
+	color: var(--primary);
+	transform: translateY(-1px);
+}
+
+nav span {
+	color: var(--muted);
+	font-weight: 500;
+	padding: 10px 2px;
+}
+
+body > :not(nav) {
+	width: min(1180px, calc(100% - 32px));
+	margin: 24px auto 40px;
+}
+
+@media (max-width: 640px) {
+	nav {
+		padding: 14px;
+	}
+
+	nav a,
+	nav span {
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+
+	body > :not(nav) {
+		width: min(1180px, calc(100% - 20px));
+		margin-top: 18px;
+	}
+}

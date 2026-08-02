@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.book-icon {
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.book-card h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 35px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detail {
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.detail span {
+  display: block;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.detail p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.back-btn {
+  background: #6b7280;
+}
+
+.back-btn:hover {
+  background: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    padding: 25px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}

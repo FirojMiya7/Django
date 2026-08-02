@@ -1,0 +1,85 @@
+{% extends "book/layout.html" %}
+{% load static %}
+
+{% block title %}Book Library{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'book/css/book.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>📚 Book Library</h1>
+
+        <div class="top-actions">
+            <form method="get" class="search-form" role="search" aria-label="Search books">
+                <input
+                    type="text"
+                    name="q"
+                    value="{{ query }}"
+                    placeholder="Search by title or author"
+                    aria-label="Search books"
+                >
+                <button type="submit" class="search-book">Search</button>
+                {% if query %}
+                <a href="{% url 'book' %}" class="clear-search">Clear</a>
+                {% endif %}
+            </form>
+
+            <a href="{% url 'book_create' %}" class="add-book">
+                + Add Book
+            </a>
+        </div>
+
+    </div>
+
+    {% if query %}
+    <p class="search-note">Showing results for <strong>{{ query }}</strong></p>
+    {% endif %}
+
+    {% if books %}
+
+    <div class="books">
+
+        {% for book in books %}
+
+        <div class="card">
+
+            <div class="book-icon">
+                📖
+            </div>
+
+            <h2>{{ book.title }}</h2>
+
+            <p class="author">
+                {{ book.author }}
+            </p>
+
+            <p class="price">
+                Rs. {{ book.price }}
+            </p>
+
+            <a href="{% url 'book_detail' book.id %}" class="btn">
+                View Details
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+        <h2>No Books Available 📚</h2>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

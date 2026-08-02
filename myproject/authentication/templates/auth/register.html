@@ -1,0 +1,27 @@
+{% extends "book/layout.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'authentication/css/auth.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="auth-page">
+    <section class="auth-card">
+        <p class="auth-eyebrow">Start here</p>
+        <h1>Create an account</h1>
+        <p class="auth-subtitle">Join the library system and manage your books from one place.</p>
+
+<form method="post" class="auth-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="auth-actions">
+        <button type="submit">Register</button>
+    </div>
+</form>
+<p class="auth-footer">Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+    </section>
+</div>
+
+{% endblock content %}
